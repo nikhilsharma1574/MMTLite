@@ -1,5 +1,8 @@
 #include<stdio.h>
+#include<conio.h>
 int main()
 {
-    printf("Hotel management system");
+    gotoxy(10,10);
+    printf("Hotel management system =srm");
+    return 0;
 }
