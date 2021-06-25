@@ -4,7 +4,7 @@ PPs Project
 CSE-BDA , "A" section
 SRM University Chennai
 
-TOPIC- Hotel Management System
+TOPIC- OYO Hotel Management System
 
 
 
