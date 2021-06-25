@@ -2,7 +2,7 @@
 #include<conio.h>
 int main()
 {
-    gotoxy(10,10);
-    printf("Hotel management system =srm");
+    printf("Welcome to \n");
+    printf("OYO - Hotel Booking Service\n");
     return 0;
 }
