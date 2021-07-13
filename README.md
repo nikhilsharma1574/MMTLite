@@ -14,3 +14,17 @@ Team Members:-
 3)105-Siddhan Singh
 4)108-Aditya
 5)112-Nishant Shandilya
+
+
+
+
+Concept used till now
+-
+1) file handeling
+2) Structures
+3) unions
+4) functions
+5) loops
+6) conditional operators
+7) pointers
+8) array
