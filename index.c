@@ -15,7 +15,7 @@ void choose()
 int main()
 {
  clrscr();
- ofstream f;
+ FILE *f= NULL;
  time_t t; // Time k liye
  time(&t);
    int c,date,year,adult,child,infant,month;
@@ -63,6 +63,12 @@ int main()
      printf("Number Of Infants = ");
      scanf("%d",&infant);
      printf("\n");
+     char string[100];
+     printf("Enter Data = ");
+     scanf("%s",string);
+     f=fopen("flight.txt","w");
+     fprintf(f,"%s",string);
+     fclose(f);
      }
    getch();
    return 0;
