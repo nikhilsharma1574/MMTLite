@@ -5,21 +5,14 @@
 #include<conio.h>
 #include<stdio.h>
 #include<string.h>
-void choose()
-{
-  gotoxy(6,22);
-     printf("                      Press 1 to Continue Next Step\n");
-  gotoxy(6,23);
-     printf("                      Press 0 to Choose Again\n");
-}
 int main()
 {
  clrscr();
  FILE *f= NULL;
  time_t t; // Time k liye
  time(&t);
-   int c,date,year,adult,child,infant,month;
-   char o[100],d[100];
+   int c,date,year,adult,child,infant,age;
+   char o[100],d[100],month[50],meal[10],first_name[50];
     gotoxy(37,2);
      printf("Welcome To\n");
     gotoxy(33,4);
@@ -40,36 +33,46 @@ int main()
      gotoxy(22,2);
      printf("SRM Welcomes You to Flight Booking Gateway\n\n");
      printf("--------------------------------------------------------------------------------\n");
+     f=fopen("flight.txt","a");
+     fprintf(f,"\n");
      printf("Enter Origin = ");
      scanf("%s",o);
-     printf("\n");
-     gotoxy(45,6);
+     fprintf(f,"%s\t",o);
+     printf("\n\n");
+     gotoxy(46,6);
      printf("Enter Destination = ");
      scanf("%s",d);
+     fprintf(f,"%s\t",d);
      printf("\n\n");
      printf("Enter Date Of Journey = ");
      scanf("%d",&date);
+     fprintf(f,"%d",date);
      printf("Enter Month Of Journey = ");
-     scanf("%d",&month);
+     scanf("%s",month);
+     fprintf(f,"%s",month);
      printf("Enter Year Of Journey = ");
      scanf("%d",&year);
+     fprintf(f,"%d\t",year);
      printf("\n");
-     printf("Number Of Adults = ");
+     printf("    Number Of Adults = ");
      scanf("%d",&adult);
+     fprintf(f,"%d\t",adult);
      printf("\n");
-     printf("Number Of Childs = ");
+     printf("    Number Of Childs = ");
      scanf("%d",&child);
+     fprintf(f,"%d\t",child);
      printf("\n");
-     printf("Number Of Infants = ");
+     printf("    Number Of Infants = ");
      scanf("%d",&infant);
+     fprintf(f,"%d\t",infant);
      printf("\n");
-     char string[100];
-     printf("Enter Data = ");
-     scanf("%s",string);
-     f=fopen("flight.txt","w");
-     fprintf(f,"%s",string);
      fclose(f);
-     }
+     printf("Do u Want Flight Meal(yes/no) = ");
+     scanf("%s",meal);
+     clrscr();
+     gotoxy(31,2);
+     printf("Enter Passanger Details \n\n");
+     printf("--------------------------------------------------------------------------------\n");
    getch();
    return 0;
 }
