@@ -108,9 +108,22 @@ int main()
     if(strcmp(username,"studentofsrm")==0)
 	{
 	if(strcmp(password,"SRM0203")==0)
-		{
-
-	printf("\n\nWelcome Login Success!");   //yeha pe pura login k baad ka code
+	{
+	gotoxy(25,20);
+	printf("\n\n                           Welcome Login Success!\n");
+	printf("                       Press 1 to redirect to Student profile\n");
+	int a;
+	scanf("%d",a);
+	clrscr();
+	gotoxy(22,2);
+	printf("\nWelcome Back SRM Student \n");
+	printf("--------------------------------------------------------------------------------\n");
+	gotoxy(56,6);
+	printf("%s\n",ctime(&t));
+	  printf("Select Hostel/n/n/n");
+	  printf("A Hostel 1\nB Hostel 2\nC Hostel 3\nD Hostel 4\n\n");
+	  char c;
+	  printf("Enter Your Choice = ");
 	}
 	else
 	{
@@ -121,6 +134,7 @@ else
 {
     printf("\nUser doesn't exist");
 }
+
        }
    getch();
    return 0;
