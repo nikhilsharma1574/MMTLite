@@ -89,8 +89,38 @@ int main()
 	 } */
        }
        if(c==2)
-       {
-	    //  hotel booking systel chalu hoga..
+       { clrscr();
+	 gotoxy(33,2);                //  hotel booking systel chalu hoga..
+	   printf("SRM Booking Portal \n\n");
+	 printf("--------------------------------------------------------------------------------\n");
+	 gotoxy(56,6);
+	  printf("%s\n",ctime(&t));
+	 printf("Weclome Back Student\n");
+	 printf("Please Login With SRM Student ID\n");
+    char username[15];
+    char password[12];
+    gotoxy(25,12);
+    printf("Enter your username: ");
+    scanf("%s",&username);
+    gotoxy(25,14);
+    printf("Enter your password: ");
+    scanf("%s",&password);
+    if(strcmp(username,"studentofsrm")==0)
+	{
+	if(strcmp(password,"SRM0203")==0)
+		{
+
+	printf("\n\nWelcome Login Success!");   //yeha pe pura login k baad ka code
+	}
+	else
+	{
+	 printf("\nWrong password");
+	}
+    }
+else
+{
+    printf("\nUser doesn't exist");
+}
        }
    getch();
    return 0;
